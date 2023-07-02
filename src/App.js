@@ -16,15 +16,15 @@ function App() {
       </div>
       <div className="list">
         <h4> { sweatshirt } </h4>
-        <p> June 29th, 2023 </p>
+        <p> July 1st, 2023 </p>
       </div>
       <div className="list">
         <h4> { sushi } </h4>
-        <p> June 28th, 2023 </p>
+        <p> June 30th, 2023 </p>
       </div>
       <div className="list">
         <h4> { german } </h4>
-        <p> June 27th, 2023 </p>
+        <p> June 29th, 2023 </p>
       </div>
     </div>
   );
