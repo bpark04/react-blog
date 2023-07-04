@@ -6,8 +6,8 @@ function App() {
 
   let post = 'Vancouver Sushi Restaurants';
   let [sweatshirt, setSweatshirt] = useState('Sweatshirt');
-  let [sushi, setSushi] = useState('Sushi');
-  let [german, func] = useState('German');
+  let [pants, setPants] = useState('Pants');
+  let [shirt, setShirt] = useState('Shirt');
 
   return (
     <div className="App">
@@ -19,11 +19,11 @@ function App() {
         <p> July 1st, 2023 </p>
       </div>
       <div className="list">
-        <h4> { sushi } </h4>
+        <h4> { pants } </h4>
         <p> June 30th, 2023 </p>
       </div>
       <div className="list">
-        <h4> { german } </h4>
+        <h4> { shirt } </h4>
         <p> June 29th, 2023 </p>
       </div>
     </div>
