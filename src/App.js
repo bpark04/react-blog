@@ -1,33 +1,56 @@
-import logo from './logo.svg';
+/* eslint-disable */
+
 import './App.css';
 import { useState } from 'react'; 
 
 function App() {
 
   let post = 'Vancouver Sushi Restaurants';
-  let [sweatshirt, setSweatshirt] = useState('Sweatshirt');
-  let [pants, setPants] = useState('Pants');
-  let [shirt, setShirt] = useState('Shirt');
+  let [title, setTitle] = useState(['Sweatshirt', 'Pants', 'Shirt']);
+  let [like, setLike] = useState([0, 0, 0]);
+  let [modal, setModal] = useState(false);
+
+  const changeModal = () => {
+    setModal(!modal);
+  }
 
   return (
     <div className="App">
       <div className="blog-nav">
         <h4> BLOG </h4>
       </div>
-      <div className="list">
-        <h4> { sweatshirt } </h4>
-        <p> July 1st, 2023 </p>
-      </div>
-      <div className="list">
-        <h4> { pants } </h4>
-        <p> June 30th, 2023 </p>
-      </div>
-      <div className="list">
-        <h4> { shirt } </h4>
-        <p> June 29th, 2023 </p>
-      </div>
+
+      {
+        title.map((a, i) => {
+          return (
+            <div className="list" key={i}>
+              <h4> <span onClick={changeModal}>{ a }</span> <span onClick={() => {
+                let copy = [...like];
+                copy[i] = copy[i] + 1;
+                setLike(copy);
+              }}>👍</span> { like[i] } </h4>
+              <p> June 30th, 2023 </p>
+            </div>
+          )
+        })
+      }
+
+      {
+        modal == true ? <Modal/> : null
+      }
+
     </div>
   );
+}
+
+const Modal = () => {
+  return (
+    <div className='modal'>
+      <h4> Title </h4>
+      <p> Date </p>
+      <p> Contents </p>
+    </div>
+  )
 }
 
 export default App;
