@@ -11,10 +11,26 @@ div {
   box-sizing: border-box;
 }
 
+span {
+  cursor: pointer;
+}
+
+.delete {
+  margin-bottom: 10px;
+}
+
+.post {
+  margin-left: 10px;
+}
+
 .list {
   padding-left: 20px;
   text-align: left;
   border-bottom: 1px solid grey;
+}
+
+.posting {
+  margin-top: 20px;
 }
 
 .modal {
